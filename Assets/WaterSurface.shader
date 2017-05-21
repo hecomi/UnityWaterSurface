@@ -65,7 +65,7 @@ void surf(Input IN, inout SurfaceOutputStandard o)
     o.Smoothness = _Glossiness;
     o.Alpha = _Color.a * (0.5 + 0.5 * clamp(tex2D(_DispTex, IN.uv_DispTex).r, 0, 1));
 
-    float3 duv = float3(_DispTex_TexelSize.xy, 0) * 10;
+    float3 duv = float3(_DispTex_TexelSize.xy, 0);
     half v1 = tex2D(_DispTex, IN.uv_DispTex - duv.xz).y;
     half v2 = tex2D(_DispTex, IN.uv_DispTex + duv.xz).y;
     half v3 = tex2D(_DispTex, IN.uv_DispTex - duv.zy).y;

@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 1144170170}
   waterSimulation: {fileID: 1321916099}
-  minMaxSize: {x: 0.08, y: 0.1}
+  minMaxSize: {x: 0.09, y: 0.1}
   mode: 2
 --- !u!65 &1144170170
 BoxCollider:
@@ -335,8 +335,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.2, z: 10}
-  m_Center: {x: 0, y: -0.1, z: 0}
+  m_Size: {x: 10, y: 0.1, z: 10}
+  m_Center: {x: 0, y: -0.05, z: 0}
 --- !u!1 &1254621118
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texture: {fileID: 8600000, guid: be8c672ce9314b1409c245d2c813b108, type: 2}
-  iterationPerFrame: 1
+  iterationPerFrame: 2
   clickRadius: 0.1
   clickLayerMask:
     serializedVersion: 2

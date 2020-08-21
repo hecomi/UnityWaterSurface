@@ -422,13 +422,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254621118}
-  m_LocalRotation: {x: 0.30868497, y: 0, z: 0, w: 0.9511644}
-  m_LocalPosition: {x: 0, y: 5.18, z: -10.47}
+  m_LocalRotation: {x: 0.19477002, y: -0, z: -0, w: 0.98084897}
+  m_LocalPosition: {x: 0, y: 4.09, z: -11.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35.96, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.463, y: 0, z: 0}
 --- !u!1 &1321916098
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +558,7 @@ GameObject:
   - component: {fileID: 1860593789}
   - component: {fileID: 1860593788}
   - component: {fileID: 1860593792}
+  - component: {fileID: 1860593793}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -584,7 +585,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 581a4aa5c4b8fc34e8f314b57b7f0ebc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -635,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860593787}
   m_LocalRotation: {x: -0, y: -0.019041162, z: -0, w: 0.9998187}
-  m_LocalPosition: {x: -0.08, y: 0, z: 4.02}
+  m_LocalPosition: {x: -4, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -657,6 +658,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &1860593793
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860593787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fb98f06f0ffc6144ae020c0f5fe5205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1915308025
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 581a4aa5c4b8fc34e8f314b57b7f0ebc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

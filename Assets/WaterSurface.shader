@@ -9,8 +9,9 @@ Properties
     _Metallic ("Metallic", Range(0,1)) = 0.0
     _MinDist("Min Distance", Range(0.1, 50)) = 10
     _MaxDist("Max Distance", Range(0.1, 50)) = 25
-    _TessFactor("Tessellation", Range(1, 50)) = 10
+    _TessFactor("Tessellation", Range(1, 100)) = 10
     _Displacement("Displacement", Range(0, 1.0)) = 0.3
+    _Lod("Lod", Range(0, 4)) = 1
 }
 
 SubShader
@@ -33,6 +34,7 @@ float4 _DispTex_TexelSize;
 fixed4 _Color;
 half _Glossiness;
 half _Metallic;
+float _Lod;
 
 struct appdata 
 {
@@ -54,7 +56,9 @@ float4 tessDistance(appdata v0, appdata v1, appdata v2)
 
 void disp(inout appdata v)
 {
-    float d = tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Displacement;
+    float displacement = tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, _Lod)).r;
+    //float d =  sign(displacement) * sqrt(abs(displacement)) * _Displacement;
+    float d =  displacement * _Displacement;
     v.vertex.xyz += v.normal * d;
 }
 
@@ -66,10 +70,10 @@ void surf(Input IN, inout SurfaceOutputStandard o)
     o.Alpha = _Color.a * (0.5 + 0.5 * clamp(tex2D(_DispTex, IN.uv_DispTex).r, 0, 1));
 
     float3 duv = float3(_DispTex_TexelSize.xy, 0);
-    half v1 = tex2D(_DispTex, IN.uv_DispTex - duv.xz).y;
-    half v2 = tex2D(_DispTex, IN.uv_DispTex + duv.xz).y;
-    half v3 = tex2D(_DispTex, IN.uv_DispTex - duv.zy).y;
-    half v4 = tex2D(_DispTex, IN.uv_DispTex + duv.zy).y;
+    half v1 = tex2Dlod(_DispTex, float4(IN.uv_DispTex - duv.xz, 0, _Lod)).y;
+    half v2 = tex2Dlod(_DispTex, float4(IN.uv_DispTex + duv.xz, 0, _Lod)).y;
+    half v3 = tex2Dlod(_DispTex, float4(IN.uv_DispTex - duv.zy, 0, _Lod)).y;
+    half v4 = tex2Dlod(_DispTex, float4(IN.uv_DispTex + duv.zy, 0, _Lod)).y;
     o.Normal = normalize(float3(v1 - v2, v3 - v4, 0.3));
 }
 

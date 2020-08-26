@@ -18,7 +18,7 @@ CustomRenderTexture:
   m_AntiAliasing: 1
   m_MipCount: -1
   m_DepthFormat: 0
-  m_ColorFormat: 46
+  m_ColorFormat: 50
   m_MipMap: 0
   m_GenerateMips: 1
   m_SRGB: 0
@@ -38,20 +38,20 @@ CustomRenderTexture:
   m_Material: {fileID: 2100000, guid: 2dcfa7fe472afa24cab4179976935e21, type: 2}
   m_InitSource: 0
   m_InitMaterial: {fileID: 0}
-  m_InitColor: {r: 0.5955882, g: 0.5955882, b: 0.5955882, a: 1}
+  m_InitColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
   m_InitTexture: {fileID: 2800000, guid: a8645a6b624c4ae46a1834660801faf3, type: 3}
   m_UpdateMode: 2
   m_InitializationMode: 2
   m_UpdateZoneSpace: 0
   m_CurrentUpdateZoneSpace: 0
   m_UpdateZones:
-  - updateZoneCenter: {x: 0.508, y: 0.902, z: 0}
-    updateZoneSize: {x: 0.09425858, y: 0.09425858, z: 0}
+  - updateZoneCenter: {x: 0.797, y: 0.24000001, z: 0}
+    updateZoneSize: {x: 0.09557763, y: 0.09557763, z: 0}
     rotation: 0
     passIndex: 2
     needSwap: 1
-  - updateZoneCenter: {x: 0.797, y: 0.24000001, z: 0}
-    updateZoneSize: {x: 0.09130883, y: 0.09130883, z: 0}
+  - updateZoneCenter: {x: 0.49951008, y: 0.1, z: 0}
+    updateZoneSize: {x: 0.094341904, y: 0.094341904, z: 0}
     rotation: 0
     passIndex: 2
     needSwap: 1

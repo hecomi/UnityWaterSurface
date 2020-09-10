@@ -1,9 +1,9 @@
 Unity Water Surface
 ===================
 
-This is a simple example of CustomRenderTexture available from Unity 2017.1.
+This is a simple example of CustomRenderTexture available from Unity 2017.1. - Unity 2020.1
 
-![UnityWaterSurface](https://raw.githubusercontent.com/wiki/hecomi/UnityWaterSurface/wave.gif)
+![UnityWaterSurface](Docs/capture.gif)
 
 License
 -------
